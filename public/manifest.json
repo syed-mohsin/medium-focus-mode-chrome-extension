@@ -3,10 +3,18 @@
   "description": "When enabled, transform Medium to be maximize focus while writing new stories.",
   "version": "1.0",
   "manifest_version": 3,
+  "host_permissions": ["https://medium.com/*"],
   "action": {
     "default_popup": "index.html",
     "default_title": "Open the popup"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://medium.com/*"],
+      "js": ["./static/js/content.js"],
+      "run_at": "document_end"
+    }
+  ],
   "icons": {
     "16": "logo192.png",
     "48": "logo192.png",
