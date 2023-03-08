@@ -10,4 +10,4 @@ When "Focus Mode" is enabled, the extension removes the following:
 - Partner Program stats
 - Profile page
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/10647626/223849278-3fc04384-f6e4-4402-8e4f-46b43789237a.png">
+![ezgif-2-daac2a133f](https://user-images.githubusercontent.com/10647626/223850046-bfccf33d-82cf-442e-8ba1-9c9bef524235.gif)
