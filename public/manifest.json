@@ -1,6 +1,6 @@
 {
-  "name": "Medium Focus Mode - Chrome Extension",
-  "description": "When enabled, transform Medium to be maximize focus while writing new stories.",
+  "name": "Medium Focus Mode",
+  "description": "When enabled, remove distractions from Medium to maximize focus while writing new stories.",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": ["storage"],

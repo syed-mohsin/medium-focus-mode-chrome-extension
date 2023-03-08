@@ -33,7 +33,7 @@ const enableFocusMode = async () => {
 
   hideNotificationBell();
   // some pages will re-inject the notification bell, so remove again
-  setTimeout(hideNotificationBell, 500); 
+  setTimeout(hideNotificationBell, 500);
 
   // hide the main feed, except for stories or story editing
   if (
@@ -63,5 +63,7 @@ enableFocusMode();
 chrome.runtime.onMessage.addListener(async (message) => {
   if (message.checkState) {
     document.location.reload();
+  } else if (message.urlChanged) {
+    setTimeout(enableFocusMode, 500);
   }
 });

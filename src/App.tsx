@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
-import { STORAGE_KEY } from "./constants";
+import { MEDIUM_WILDCARD, STORAGE_KEY } from "./constants";
 
 export const App = () => {
   const [focusMode, setFocusMode] = useState(false);
@@ -33,7 +33,7 @@ export const App = () => {
       [STORAGE_KEY]: e.target.checked,
     });
 
-    chrome.tabs.query({ url: ["https://medium.com/*"] }, (tabs) => {
+    chrome.tabs.query({ url: [MEDIUM_WILDCARD] }, (tabs) => {
       tabs.forEach((tab) => {
         chrome.tabs.sendMessage(tab.id!, { checkState: true });
       });
