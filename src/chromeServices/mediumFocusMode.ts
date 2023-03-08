@@ -32,7 +32,8 @@ const enableFocusMode = async () => {
   if (!inFocusMode) return;
 
   hideNotificationBell();
-  setTimeout(hideNotificationBell, 500);
+  // some pages will re-inject the notification bell, so remove again
+  setTimeout(hideNotificationBell, 500); 
 
   // hide the main feed, except for stories or story editing
   if (

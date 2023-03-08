@@ -7,6 +7,8 @@ import {
   theme,
   Switch,
   Heading,
+  Img,
+  Flex,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
@@ -42,7 +44,10 @@ export const App = () => {
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl" width="500px">
         <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
+          <Flex alignItems="center" justifyContent="end">
+            <Img src="/logo192.png" width="18px" height="18px" />
+            <ColorModeSwitcher justifySelf="flex-end" />
+          </Flex>
           <VStack spacing={8}>
             <Heading size="2xl">Medium Focus Mode</Heading>
             <Switch
