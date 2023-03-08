@@ -10,6 +10,7 @@ module.exports = {
             paths.appIndexJs,
           ].filter(Boolean),
           content: "./src/chromeServices/mediumFocusMode.ts",
+          background: "./src/chromeServices/mediumBackground.ts",
         },
         output: {
           ...webpackConfig.output,
